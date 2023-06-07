@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit; 
+} */
+.no-scroll {
+  overflow: hidden; 
+}
+/* .fullscreen {
+  overflow: hidden;
+} */
+.zhutu{
+    height: 100%;
+}
+
+.shouye{
+    width: 100%;
+}
+.fanyebtn{
+    background-color: blueviolet;
+    position: absolute;
+    margin-top:auto 0;
+}

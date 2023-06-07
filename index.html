@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+
+</head>
+
+<body class="fullscreen">
+    <div class="shouye">
+        <div class="fanyebtn">
+            131
+        </div>
+        <button class="prev">上一页</button>
+        <button class="next">下一页</button>
+        <div class="slider">
+            <img class="zhutu" src="/img/01.png" alt="">
+            <img class="zhutu" src="/img/02.png" alt="">
+            <img class="zhutu" src="/img/03.png" alt="">
+            <img class="zhutu" src="/img/04.png" alt="">
+            <img class="zhutu" src="/img/05.png" alt="">
+            <img class="zhutu" src="/img/06.png" alt="">
+        </div>
+    </div>
+
+
+    <script src="jquery3.7.js"></script>
+    <script>
+        $(function () {
+            let current = 0;
+            let timer;
+
+            function showImage() {
+                $('#slider img').hide();
+                $('#slider img').eq(current).fadeIn();
+            }
+
+            function autoPlay() {
+                timer = setInterval(() => {
+                    current++;
+                    if (current > $('#slider img').length - 1) current = 0;
+                    showImage();
+                }, 3000);
+            }
+
+            autoPlay();
+
+            $('.prev').on('click', () => {
+                current--;
+                if (current < 0) current = $('#slider img').length - 1;
+                showImage();
+                clearInterval(timer);
+                autoPlay();
+            });
+
+            $('.next').on('click', () => {
+                current++;
+                if (current > $('#slider img').length - 1) current = 0;
+                showImage();
+                clearInterval(timer);
+                autoPlay();
+            });
+        });
+    </script>
+</body>
+
+</html>
