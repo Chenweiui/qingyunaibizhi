@@ -213,3 +213,9 @@ html {
         font-size: 9px;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .prev,.next{
+        display: none;
+    }
+}
