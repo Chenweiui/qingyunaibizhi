@@ -1,0 +1,215 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.carousel img.active {
+    opacity: 1;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    margin: 0 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
+}
+
+.phone {
+    /* 位置 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* 样式 */
+    width: 45vh;
+    height: 90vh;
+    border-radius: 30px;
+    border: 10px double rgba(255, 255, 255, 0.39);
+}
+
+
+#clock {
+    /* 位置 */
+    position: relative;
+    left: 10%;
+    top: 1%;
+
+    /* 样式 */
+    font-size: 50px;
+    font-weight: 620;
+    color: white;
+
+}
+
+#date {
+    position: relative;
+    left: 10%;
+    top: -40px;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+
+
+/* iconbox */
+
+
+.iconarea {
+    /* 位置 */
+    position: relative;
+    /* left: 29px; */
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+
+    /* 子元素排布 */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    /* 样式 */
+    /* background-color: rgb(73, 32, 167); */
+    width: 90%;
+    /* height: 20vh; */
+}
+
+.iconbox {
+    /* 子元素排布 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7px;
+
+    /* 样式 */
+    width: 30%;
+    padding: 3px;
+    height: 85px;
+    /* background-color: rgba(4, 0, 255, 0.767); */
+    /* 动画 */
+    transition: transform 0.1s;
+}
+
+.iconbox a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconbox img {
+
+    /* 样式 */
+    width: 80%;
+    height: auto;
+    border: #FFFFFF;
+}
+
+.icontext {
+
+    /* 样式 */
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    line-height: 1rem;
+    opacity: .8;
+
+}
+
+.iconbox:hover {
+    transform: scale(1.1);
+}
+
+/* .iconare:not(:first-child){
+    visibility: hidden;
+} */
+/* .iconarea a:not(:first-child) {
+    visibility: hidden;
+} */
+/* .iconarea a:not(:first-of-type) .iconbox {
+    visibility: hidden;
+} */
+
+/* button */
+
+.downloadbtn {
+    /* 区域位置 */
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%);
+
+    /* 子元素位置 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    /* 区域样式 */
+    /* background-color: aqua; */
+    width: 90%;
+    height: 200px;
+
+}
+
+.downloadbtn button {
+    position: static;
+    /* 样式 */
+    width: 80%;
+    height: 50px;
+    border-radius: 179px;
+    opacity: 0.85;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid #ffffffb2;
+    --webkit-backdrop-filter: blur(48.6px);
+}
+
+
+.downloadbtn button:hover {
+    background-color: rgba(255, 255, 255, 0.479);
+    color: #FFFFFF;
+
+}
+
+@media screen and (max-height: 900px) {
+    .icontext {
+        font-size: 9px;
+    }
+}
